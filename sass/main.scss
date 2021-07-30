@@ -1,0 +1,132 @@
+$white:#f9fcfd;
+$leattercolor:#484a4b;
+$black:#1c1d21;
+$titleblack:#1c1d21;
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 16px;
+    color: $white;
+    animation:changes 15s  infinite ;
+}
+
+nav{
+        height: 70px;
+        width: 100%;
+        background-color: $black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;        
+        .logo{
+            
+            .logotype{
+                border: 1px solid $white;
+                padding: 3px;
+
+            }
+        }
+        
+        .nav-menu{
+        display: flex;
+        width: 30%;
+        justify-content:space-evenly;
+        // whent active 
+        .nav-content{
+                a{
+                font-size: 1.125em;
+                text-transform: uppercase;
+                color: $white;
+                text-decoration: none;
+                border-top: 2px solid transparent;
+                border-bottom: 2px solid transparent;
+                padding: 4px 0;
+                transition: .6s ease-in-out;
+                &:hover{
+                border-top: 2px solid $white;
+                border-bottom: 2px solid $white;
+                }
+            }
+            }
+            
+        }    
+    
+    .btn{
+        display: none;
+    }
+}
+
+main{
+       
+    p{
+        text-align: left;
+    }
+    .container{
+        width: 90%;
+        margin:0 auto;
+        .container-1{
+
+            width: 80%;
+            margin: 12.5em auto;
+            color: $titleblack;
+            background-color: rgba(255,255,255,.6);
+            padding: 12px 12px 50px;
+            border-radius: 12px;
+        }            
+        
+    }
+}
+
+@keyframes changes{
+    0%{
+        background: url(/src/city.gif);
+         width: 100%;
+        height: 100vh;
+        background-size: cover;
+    }
+    20%{
+        background: url(/src/rain.gif);
+         width: 100%;
+        height: 100vh;
+        background-size: cover;
+    }
+    100%{
+        background: url(/src/city.gif);
+         width: 100%;
+        height: 100vh;
+        background-size: cover;
+    }
+}
+@media screen and(max-width:700px) {
+    body{
+        font-size: 15px;
+    } 
+    nav{
+        .nav-menu{
+            position:fixed;
+            width: 100%;
+            height: 100% ;
+            background-color: $black;
+            top: 100vh;
+            flex-direction: column;
+            
+        } 
+          
+        
+        .btn{
+            display: inline-flex;
+        }     
+    }
+}
+@media screen and(max-width:500px) {
+    body{
+        font-size: 14px;
+    }
+}
