@@ -1,4 +1,19 @@
 
+const navshow = document.querySelector('.toggle')
+const menu = document.querySelector('.nav-menu')
+
+navshow.addEventListener('click', ()=>{
+menu.classList.toggle('active')
+
+    // this code if the device does not accept the code
+    if (menu.classList.contains('active')) {
+        navshow.setAttribute('aria-label','close-menu')
+    } else {
+        navshow.setAttribute('aria-label','open-menu')
+    }
+
+
+})
 
 
 const typed = new Typed('.typing', {
